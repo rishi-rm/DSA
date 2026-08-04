@@ -12,7 +12,10 @@ public class Main {
         int mid = start + (end-start)/2;
         while(arr[end] < target){
             System.out.println(start+"\t"+end);
+            int temp = start;
             start = end+1;
+            // end = previous end + 2*(previous end - previous start)
+            end = end + 2*(end-temp+1);
         }
     }
 }
